@@ -9,16 +9,10 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace DelegateAndEvent.Models
 {
-    public delegate void FirstDelegate(bool b);
+    public delegate void FirstDelegate(ResultDelegate resultDelegate);
 
     internal class FirstClass
     {
-        public FirstClass()
-        {
-            // Не працює, (No overload for 'Show' matches delegate 'FirstDelegate'
-            FirstDelegate firstDelegate = new Starter().Show;
-        }
-
         /// <summary>
         /// Перемноження вхідних чисел.
         /// </summary>

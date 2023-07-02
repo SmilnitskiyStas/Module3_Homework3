@@ -1,4 +1,6 @@
-﻿namespace DelegateAndEvent
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace DelegateAndEvent
 {
     internal class Program
     {

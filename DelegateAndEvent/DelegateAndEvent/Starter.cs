@@ -11,13 +11,13 @@ namespace DelegateAndEvent
     {
         public void Run()
         {
-            FirstClass firstClass = new FirstClass();
+            FirstDelegate firstDelegate = Show;
 
             PowDelegate powDelegate = new FirstClass().Pow;
 
             ResultDelegate resultDelegate = new SecondClass().Calc(powDelegate, 2, 5);
 
-            Show(resultDelegate);
+            firstDelegate(resultDelegate);
         }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace DelegateAndEvent
         /// <param name="resultDelegate">Делегат який викликає метод Result.</param>
         public void Show(ResultDelegate resultDelegate)
         {
-            Console.WriteLine($"Result - {resultDelegate}");
+            Console.WriteLine($"Result - {resultDelegate.Method.ReturnParameter}");
         }
     }
 }
